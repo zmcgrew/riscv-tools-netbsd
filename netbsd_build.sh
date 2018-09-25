@@ -12,7 +12,8 @@ openocd() {
     cd "${TOP}/riscv-openocd"
     rm -rf build-openocd
     mkdir build-openocd
-    cd build-openocd
+    ./bootstrap.sh &&
+    cd build-openocd &&
     ../configure \
         --prefix=${RISCV} \
         --enable-remote-bitbang \

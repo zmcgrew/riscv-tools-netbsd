@@ -12,7 +12,7 @@ openocd() {
     cd "${TOP}/riscv-openocd"
     rm -rf build-openocd
     mkdir build-openocd
-    ./bootstrap.sh &&
+    ./bootstrap &&
     cd build-openocd &&
     ../configure \
         --prefix=${RISCV} \

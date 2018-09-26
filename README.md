@@ -28,8 +28,8 @@ pkg_add gmake bison flex gsed gawk autoconf automake pkg-config libtool bash
   from there to simplify building the tools.
   
   ```
-  git clone https://github.com/zmcgrew/riscv-tools-netbsd.git ~/riscv-tools-netbsd
-  cd riscv-tools-git
+  git clone --depth 1 https://github.com/zmcgrew/riscv-tools-netbsd.git ~/riscv-tools-netbsd
+  cd riscv-tools-netbsd
   ```
 
 ### Setup your path for the tools ###
@@ -50,7 +50,7 @@ export PATH
 ### Fetch the NetBSD RISC-V branch ###
 ```
 mkdir ~/netbsd && cd ~/netbsd
-git clone -b riscv https://github.com/zmcgrew/src.git src
+git clone --depth 1 -b riscv https://github.com/zmcgrew/src.git src
 ln -s src/build_riscv.sh ./build_riscv.sh
 ```
 ### Build the NetBSD tools ###
